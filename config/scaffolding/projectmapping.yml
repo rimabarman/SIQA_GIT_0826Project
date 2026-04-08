@@ -1,6 +1,12 @@
 version: "1.0"
 projectName: SIQA_GIT_0826Project
 runtimes:
+- runtimeAlias: Cloud Designtime
+  assets:
+  - name: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.integrations:conntest
+    type: flow
+    stepId: /1
+    reference: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.WmPackageServiceProvider.SIQACloudStreamsTests:connetorOperations
 - runtimeAlias: SIQA_ERT_0804
   assets:
   - name: Call_deepclonetest
@@ -12,10 +18,6 @@ runtimes:
     type: flow
     stepId: /0
     reference: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.WmPackageServiceProvider.GB_1:readGlobalvariable
-  - name: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.integrations:conntest
-    type: flow
-    stepId: /1
-    reference: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.WmPackageServiceProvider.SIQACloudStreamsTests:connetorOperations
   - name: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.integrations:conntest
     type: flow
     stepId: /2
