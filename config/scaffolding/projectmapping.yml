@@ -3,7 +3,7 @@ projectName: SIQA_GIT_0826Project
 runtimes:
 - runtimeAlias: SIQA_ERT_0804
   assets:
-  - name: Untitled Workflow
+  - name: Call_deepclonetest
     type: workflow
     uid: fl978b9b63b3f65322bf6d93
     stepId: a0
