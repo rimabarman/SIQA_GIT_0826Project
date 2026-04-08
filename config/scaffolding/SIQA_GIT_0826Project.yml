@@ -16,6 +16,22 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2105
+- serviceName: project.siqa_git_0826.integrations:deepclonetest
+  packages:
+  - name: SIQA_GIT_0826Project
+    version: "1.0"
+- serviceName: pub.string:stringToBytes
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2105
+- serviceName: pub.utils:deepClone
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2105
+- serviceName: pub.string:bytesToString
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2105
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
   jdbcfunc.SAPTxStore.failFastMode: false
