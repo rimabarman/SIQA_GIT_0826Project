@@ -20,11 +20,31 @@ packages:
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: DADA_GlobalVariable1
+  version: "1.0"
   gitServerName: SIQAGitHub
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: manoj-jannu-IBM
   gitBranch: main
+- name: WmJDBCAdapter
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
 services:
+- serviceName: project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1_rima
+  packages:
+  - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: SIQACloudStreamsTests
+    version: "1.0"
 - serviceName: project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBInsert
   packages:
   - name: SIQA_GIT_0826Project
@@ -107,19 +127,65 @@ services:
     version: 11.1.0.0.2105
 configurationVariables:
   jdbc.SAP TxStore Pool.maxConns: "10"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.keyStore
+  : ""
   jdbcfunc.SAPTxStore.failFastMode: false
   jdbc.SAP TxStore Pool.poolThreshold: "0"
-  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.trustStore
+  : ""
   jdbc.SAP TxStore Pool.spyenabled: "false"
   jdbc.SAP TxStore Pool.useSSL: "false"
-  jdbc.SAP TxStore Pool.waitingThread: "10"
-  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.user
+  : siqatest
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.password
+  : "{AES}D6/2AGfsSWDOcWCLrORnEQ=="
   jdbc.SAP TxStore Pool.password: "{AES}nrGf3u7Wt20hFBGh5ZeEuQ=="
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.maximumPoolSize
+  : "10"
   jdbc.SAP TxStore Pool.spyparms: SpyAttributes=(log=(file)logs/spy/SAP_TxStore_Pool.log;logTName=yes;timestamp=yes)
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.blockingTimeout
+  : "1000"
   jdbc.SAP TxStore Pool.snoopenabled: "false"
-  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.startupRetryCount
+  : "0"
   jdbc.SAP TxStore Pool.expireTime: "60000"
   jdbc.SAP TxStore Pool.minConns: "5"
-  jdbc.SAP TxStore Pool.userid: root
   jdbc.SAP TxStore Pool.driverAlias: MySQL CC Driver
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.otherProperties
+  : loginTimeout=60;driverType=thin;
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.driverType
+  : TestDriver
   jdbcfunc.SAPTxStore.connPoolAlias: SAP TxStore Pool
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.minimumPoolSize
+  : "1"
+  jdbc.SAP TxStore Pool.dbURL: jdbc:mysql://localhost:3306/SAPTRANSACTIONSTORE?useSSL=false&characterEncoding=utf-8&autoReconnect=true&maxReconnects=5&sessionVariables=wait_timeout=2147483
+  jdbc.SAP TxStore Pool.waitingThread: "10"
+  jdbc.SAP TxStore Pool.description: Connection Pool for the SAP Transaction Store
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.networkProtocol
+  : tcp
+  jdbc.SAP TxStore Pool.snoopparms: ddtdbg.ProtocolTraceEnable=true;ddtdbg.ProtocolTraceMaxline=16;ddtdbg.ProtocolTraceLocation=logs/snoop/SAP_TxStore_Pool.log;ddtdbg.ProtocolTraceShowTime=true
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.serverName
+  : 9.46.196.248
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.databaseName
+  : MYSQL_DATABASE
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.dbType
+  : MySQL
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  jdbc.SAP TxStore Pool.userid: root
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionEnabled
+  : "false"
+  ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.expireTimeout
+  : "1000"
