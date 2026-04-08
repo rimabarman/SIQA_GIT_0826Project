@@ -1,12 +1,6 @@
 version: "1.0"
 projectName: SIQA_GIT_0826Project
 runtimes:
-- runtimeAlias: Cloud Designtime
-  assets:
-  - name: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.integrations:conntest
-    type: flow
-    stepId: /0
-    reference: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.WmPackageServiceProvider.GB_1:readGlobalvariable
 - runtimeAlias: SIQAMCSPStageTest3009
   assets:
   - name: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.integrations:conntest
@@ -24,3 +18,7 @@ runtimes:
     uid: fl978b9b63b3f65322bf6d93
     stepId: a0
     reference: project.siqa_git_0826.integrations:deepclonetest
+  - name: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.integrations:conntest
+    type: flow
+    stepId: /0
+    reference: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.WmPackageServiceProvider.GB_1:readGlobalvariable
