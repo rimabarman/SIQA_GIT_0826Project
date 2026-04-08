@@ -46,9 +46,15 @@ packages:
   gitUsername: prabhakarsag
   gitBranch: main
 - name: JMSTest
+  version: "1.0"
   gitServerName: SIQAPsurGit
   gitUrl: https://github.com/prabhakarsag
   gitUsername: prabhakarsag
+  gitBranch: main
+- name: SIQA_TimeoutTest
+  gitServerName: SIQAGitHub
+  gitUrl: https://github.com/manoj-jannu-IBM
+  gitUsername: manoj-jannu-IBM
   gitBranch: main
 services:
 - serviceName: project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1_rima
@@ -62,6 +68,8 @@ services:
   - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
+    version: "1.0"
+  - name: SIQA_TimeoutTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -87,6 +95,8 @@ services:
     version: "1.0"
   - name: JMSTest
     version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -110,6 +120,8 @@ services:
   - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
+    version: "1.0"
+  - name: SIQA_TimeoutTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -135,6 +147,8 @@ services:
     version: "1.0"
   - name: JMSTest
     version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -159,6 +173,8 @@ services:
     version: "1.0"
   - name: JMSTest
     version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -175,6 +191,58 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2105
+- serviceName: project.siqa_git_0826.integrations:Call_refDataFlow
+  packages:
+  - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
+- serviceName: project.siqa_git_0826.referencedata:refData
+  packages:
+  - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: JMS2waySSL
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: JMSTest
+    version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
 - serviceName: project.siqa_git_0826.integrations:SIQAAdapterFlow
   packages:
   - name: SIQA_GIT_0826Project
@@ -186,6 +254,8 @@ services:
   - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
+    version: "1.0"
+  - name: SIQA_TimeoutTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -211,6 +281,8 @@ services:
     version: "1.0"
   - name: JMSTest
     version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -235,6 +307,8 @@ services:
     version: "1.0"
   - name: JMSTest
     version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -258,6 +332,8 @@ services:
   - name: SSL_JDBC_Test
     version: "1.0"
   - name: JMSTest
+    version: "1.0"
+  - name: SIQA_TimeoutTest
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -295,6 +371,8 @@ services:
     version: "1.0"
   - name: JMSTest
     version: "1.0"
+  - name: SIQA_TimeoutTest
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -319,12 +397,38 @@ services:
   packages:
   - name: JMS2waySSL
     version: "1.0"
-- serviceName: SSL_JDBC_Test.services:insert_ssl
+- serviceName: SSL_JDBC_Test.services:getSSLandCloseConn
   packages:
   - name: SSL_JDBC_Test
     version: "1.0"
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.transaction:startTransaction
+  packages:
+  - name: WmART
+    version: 11.1.0.0.404
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: SSL_JDBC_Test.services:get_ssl
+  packages:
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.transaction:commitTransaction
+  packages:
+  - name: WmART
+    version: 11.1.0.0.404
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: pub.art.connection:disableConnection
+  packages:
+  - name: WmART
+    version: 11.1.0.0.404
     wpmServer: https://packages.webmethods.io
     wpmRegistry: licensed
 configurationVariables:
