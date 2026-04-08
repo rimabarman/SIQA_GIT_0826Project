@@ -14,6 +14,12 @@ packages:
   gitUsername: manoj-jannu-IBM
   gitBranch: main
 - name: SIQACloudStreamsTests
+  version: "1.0"
+  gitServerName: SIQAGitHub
+  gitUrl: https://github.com/manoj-jannu-IBM
+  gitUsername: manoj-jannu-IBM
+  gitBranch: main
+- name: DADA_GlobalVariable1
   gitServerName: SIQAGitHub
   gitUrl: https://github.com/manoj-jannu-IBM
   gitUsername: manoj-jannu-IBM
@@ -22,6 +28,8 @@ services:
 - serviceName: project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:DBInsert
   packages:
   - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -36,6 +44,8 @@ services:
 - serviceName: project.siqa_git_0826.integrations:AlertsCRTandERT
   packages:
   - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -55,6 +65,8 @@ services:
   packages:
   - name: SIQA_GIT_0826Project
     version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -68,6 +80,8 @@ services:
 - serviceName: project.siqa_git_0826.integrations:deepclonetest
   packages:
   - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
