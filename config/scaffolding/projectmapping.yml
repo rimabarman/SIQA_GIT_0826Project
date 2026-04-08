@@ -1,13 +1,6 @@
 version: "1.0"
 projectName: SIQA_GIT_0826Project
 runtimes:
-- runtimeAlias: Cloud Designtime
-  assets:
-  - name: TimeoutTest
-    type: workflow
-    uid: fl974da43f6b97671a4afa23
-    stepId: a0
-    reference: SIQA_TimeoutTest:delayfor5Sec
 - runtimeAlias: SIQA_ERT_0804
   assets:
   - name: Call_deepclonetest
@@ -27,3 +20,8 @@ runtimes:
     type: flow
     stepId: /1
     reference: fld_1181857214_stage00.projects.fl4466c3e02ec5a212521db8.WmPackageServiceProvider.SIQACloudStreamsTests:connetorOperations
+  - name: TimeoutTest
+    type: workflow
+    uid: fl974da43f6b97671a4afa23
+    stepId: a0
+    reference: SIQA_TimeoutTest:delayfor5Sec
