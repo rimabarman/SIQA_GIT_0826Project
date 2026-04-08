@@ -30,14 +30,22 @@ packages:
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
 - name: WmSalesforceRESTProvider
+  version: 10.7.0.0.198
   wpmServer: https://packages.webmethods.io
   wpmRegistry: supported
+- name: SSL_JDBC_Test
+  gitServerName: rimaSCName
+  gitUrl: https://github.com/prabhakaribm
+  gitUsername: rimabarman
+  gitBranch: main
 services:
 - serviceName: project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_1_rima
   packages:
   - name: SIQA_GIT_0826Project
     version: "1.0"
   - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -57,6 +65,8 @@ services:
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -74,6 +84,8 @@ services:
   - name: SIQA_GIT_0826Project
     version: "1.0"
   - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -93,6 +105,8 @@ services:
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -110,6 +124,8 @@ services:
   - name: SIQA_GIT_0826Project
     version: "1.0"
   - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -133,6 +149,8 @@ services:
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -151,6 +169,28 @@ services:
     version: "1.0"
   - name: DADA_GlobalVariable1
     version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
+  - name: SIQAJDBCAdapterTests
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+  - name: WmSalesforceProvider
+    version: 10.7.0.0.71
+  - name: SIQACloudStreamsTests
+    version: "1.0"
+  - name: WmSalesforceRESTProvider
+    version: 10.7.0.0.198
+- serviceName: project.siqa_git_0826.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.operations.actions:TestRest
+  packages:
+  - name: SIQA_GIT_0826Project
+    version: "1.0"
+  - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
+    version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
   - name: WmJDBCAdapter
@@ -168,6 +208,8 @@ services:
   - name: SIQA_GIT_0826Project
     version: "1.0"
   - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -198,6 +240,8 @@ services:
   - name: SIQA_GIT_0826Project
     version: "1.0"
   - name: DADA_GlobalVariable1
+    version: "1.0"
+  - name: SSL_JDBC_Test
     version: "1.0"
   - name: SIQAJDBCAdapterTests
     version: "1.0"
@@ -320,7 +364,7 @@ configurationVariables:
   ? cloudstreamsconnection.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.cn.validateAfterInactivity
   : "1000"
   ? cloudstreamsconnection.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.oauth.accessToken
-  : "{AES}bzO+KX5xKoE0CKrgiYZryDr8htPRGuUMY3q4TndvSIQ6E3Hih2GI/xLe8CAGMBhBc5ZOWvNUI+3pwbsAg1sNfIBX4BHDEwKsjJ9XzOKnpS1oSsZMHmkNTnWajawBLOChHhYVaKBE7rCdHk1MTHVOXWmK1wuN3U1rA1B0VhuZoUw="
+  : "{AES}bzO+KX5xKoE0CKrgiYZryE0OrDXnNN5Z+aOclLV0Y4FmEhaweFJaFKQQ9ANeMCnNwrQIc/e2CB8uxrBZ7DESClP7lmAP9T654oxiG4LrBgUWgKcFC0mfYYaS7nfgRevAgTod56wLZbku5rfDJ+IG72mK1wuN3U1rA1B0VhuZoUw="
   jdbc.SAP TxStore Pool.useSSL: "false"
   ? cloudstreamsconnection.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.cn.socketLinger
   : "-1"
@@ -337,6 +381,8 @@ configurationVariables:
   : https://d0o000001qr6keac-dev-ed.my.salesforce.com
   ? cloudstreamsconnection.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.oauth.consumerId
   : 3MVG9pe2TCoA1Pf6F9PMP1LEDshTltGOTU2s4Xe3IzQbW5IIn21uWb9hkEKoAPPs0jyz1LQxPZlHx8Rh0WIlr
+  ? iscloudstreamsconnectorservice.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:TestRest.virtualServiceName
+  : WmCloudStreams.RestVS
   ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionManagerSettings.minimumPoolSize
   : "1"
   ? cloudstreamsconnection.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.poolIncrementSize
@@ -354,6 +400,8 @@ configurationVariables:
   : 9.46.196.248
   ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.databaseName
   : MYSQL_DATABASE
+  ? iscloudstreamsconnectorservice.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..operations..actions:TestRest.connectionAlias
+  : project.siqa_git_0826.WmSalesforceRESTProvider.com_softwareag_cloudstreams_salesforce_rest_v60.connections:RestConnAlias
   ? artConnection.SIQA_GIT_0826Project.project.siqa_git_0826.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_1_rima.connectionSettings.dbType
   : MySQL
   ? cloudstreamsconnection.project..siqa_git_0826..WmSalesforceRESTProvider..com_softwareag_cloudstreams_salesforce_rest_v60..connections:RestConnAlias.cn.idleTimeout
